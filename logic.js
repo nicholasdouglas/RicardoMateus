@@ -62,12 +62,22 @@ async function fetchCharacters()
         
     })
     }
+}
    
     function searchbyname(){
-       console.log,("nada ainda")
-   } 
+       const searchterm = document.getElementById("nameinput2").value.toLowerCase();
+       const character = document.querySelectorAll('.card');
+       
+       character.forEach((character) => {
+        const charactername = character.querySelector('h3').textContent.toLowerCase();
+            if (charactername.includes(searchterm)){
+                character.style.dislay = "flex";
+            }else{
+                character.style.display = "none"
+            }
+        })
+    }
 
 
     
-}
 
