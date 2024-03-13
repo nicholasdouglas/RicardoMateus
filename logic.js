@@ -38,6 +38,18 @@ async function fetchCharacters()
        status.className = "statusStyle";
        status.textContent = `ai: ${character.status}`;
 
+      if (character.status == "Alive"){
+        status.style.color = 'green';
+
+      }else if (character.status == "Dead"){
+        status.style.color = 'red';
+      }else {
+        status.style.color = 'grey'
+      }     
+
+
+
+
 
        card.appendChild(name);
        card.appendChild(species);
@@ -45,9 +57,9 @@ async function fetchCharacters()
        card.appendChild(status);
        container.appendChild(card)
         
-        if(character.stauts="alive"){
-            status.style = "green"
-        }
+        
+
+        
     })
     }
    
